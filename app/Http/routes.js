@@ -17,4 +17,12 @@
 
 const Route = use('Route')
 
-Route.on('/').render('welcome')
+Route.group('api', function apiGroup () {
+  Route.any('*', function* wrongApiRoutes (request, response) {
+    yield response.status(404).json({message: 'Route does not exist'})
+  })
+}).prefix('api/v1')
+
+Route.any('*', function* catchAllRoute (request, response) {
+  yield response.sendView('master')
+})

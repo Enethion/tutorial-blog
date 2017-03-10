@@ -1,19 +1,30 @@
 {
-  "name": "adonis-app",
-  "version": "3.2.1",
+  "name": "blog",
+  "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "start": "echo \"\\033[31mWARN: 'start' will be depreciated soon. Instead use 'npm run serve'\" && npm run serve",
-    "dev": "echo \"\\033[31mWARN: 'dev' will be depreciated soon. Instead use 'npm run serve:dev'\" && npm run serve:dev",
     "serve:dev": "nodemon --watch app --watch bootstrap --watch config --watch .env -x node server.js",
     "serve": "node server.js",
-    "lint": "standard"
+    "lint": "standard",
+    "lint:fix": "standard --fix"
   },
-  "author": "",
+  "author": {
+    "name": "Your Name",
+    "email": "email@exapmle.com",
+    "url": "http://your.site.url/"
+  },
   "license": "MIT",
-  "description": "",
+  "description": "My litle blog application",
   "private": true,
   "dependencies": {
+    "@angular/common": "~2.4.0",
+    "@angular/compiler": "~2.4.0",
+    "@angular/core": "~2.4.0",
+    "@angular/forms": "~2.4.0",
+    "@angular/http": "~2.4.0",
+    "@angular/platform-browser": "~2.4.0",
+    "@angular/platform-browser-dynamic": "~2.4.0",
+    "@angular/router": "~3.4.0",
     "adonis-ace": "^3.0.7",
     "adonis-auth": "^1.0.5",
     "adonis-commands": "^2.1.5",
@@ -22,8 +33,12 @@
     "adonis-lucid": "^3.0.14",
     "adonis-middleware": "^1.0.11",
     "adonis-websocket": "^1.0.3",
-    "standard": "^8.6.0",
-    "youch": "^2.0.4"
+    "angular2-materialize": "^6.7.1",
+    "core-js": "^2.4.1",
+    "materialize-css": "^0.98.0",
+    "rxjs": "5.0.1",
+    "youch": "^2.0.4",
+    "zone.js": "^0.7.4"
   },
   "standard": {
     "global": [
@@ -36,6 +51,7 @@
   },
   "devDependencies": {
     "nodemon": "^1.11.0",
-    "standard": "^8.6.0"
+    "standard": "^8.6.0",
+    "webpack": "^2.2.1"
   }
 }
